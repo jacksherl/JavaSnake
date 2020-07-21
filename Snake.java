@@ -115,7 +115,6 @@ public class Snake implements ActionListener, KeyListener {
 		int pos = -1;
 		for (int i = 0; i < parts.length; i++) {
 			if (parts[i].x == headX && parts[i].y == headY) {
-				System.out.println(i);
 				pos = i;
 				break;
 			}
@@ -185,12 +184,16 @@ public class Snake implements ActionListener, KeyListener {
 		xVel = 0;
 		yVel = 0;
 		switch (e.getKeyCode()) {
+			case 38:
 			case 87: yVel = -1 * tileSize;
 					 break;
+			case 40:
 			case 83: yVel = 1 * tileSize;
 			 		 break;
+			case 37:
 			case 65: xVel = -1 * tileSize;
 			         break;
+			case 39:
 			case 68: xVel = 1 * tileSize;
 			         break;
 		}
